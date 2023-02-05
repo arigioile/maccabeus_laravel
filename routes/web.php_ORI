@@ -16,15 +16,3 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/index.html', function () {
-    return view('index');
-});
-
-Route::get('/regolamento_rilanciata.html', function () {
-    return view('regolamento_rilanciata');
-});
-
-
-Route::get('/squadra_ril.html', function () {
-    return view('squadra_ril');
-});

@@ -331,7 +331,7 @@ edit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas
       </section>
       <!-- End SQUADRA_Portfolio Section -->
       <!-- ======= SPONSOR  Portfolio Section ======= -->
-      <section id="portfolio" class="portfolio">
+      <section id="sponsor" class="portfolio">
         <div class="container">
           <div class="section-title" data-aos="fade-up">
             <h2>Sponsor</h2>

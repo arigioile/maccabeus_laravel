@@ -28,3 +28,30 @@ Route::get('/regolamento_rilanciata.html', function () {
 Route::get('/squadra_ril.html', function () {
     return view('squadra_ril');
 });
+
+
+Route::get('/regolamento_supervolley.html', function () {
+    return view('regolamento_supervolley');
+});
+
+
+Route::get('/squadra_super.html', function () {
+    return view('squadra_super');
+});
+
+
+Route::get('/squadra_u13f.html', function () {
+    return view('squadra_u13f');
+});
+
+Route::get('/squadra_u14misto.html', function () {
+    return view('squadra_u14misto');
+});
+
+Route::get('/squadra_misto.html', function () {
+    return view('squadra_u14misto');
+});
+
+Route::get('/squadra_misto.html', function () {
+    return view('squadra_misto');
+});

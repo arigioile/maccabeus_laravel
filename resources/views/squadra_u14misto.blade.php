@@ -4,11 +4,11 @@
       <section class="breadcrumbs">
         <div class="container">
           <div class="d-flex justify-content-between align-items-center">
-            <h2>Palla rilanciata - Stagione 2022 2023 </h2>
+            <h2>U14 Misto - Stagione 2022 2023 </h2>
             <ol>
-              <li><a href="squadra_ril.html">Squadre</a></li>
-              <li><a href="squadra_ril.html">Palla rilanciata</a></li>
-              <li><a href="squadra_ril.html">La squadra</a></li>
+              <li><a href="squadra_u14misto.html">Squadre</a></li>
+              <li><a href="squadra_u14misto.html">Under 14 Misto</a></li>
+              <li><a href="squadra_u14misto.html">La squadra</a></li>
             </ol>
           </div>
         </div>
@@ -24,15 +24,15 @@
               <div class="icon-box" data-aos="fade-up" data-aos-delay="100"> <i
                   class="bx bx-cube-alt"></i>
                 <h4>Mercoledi`</h4>
-                <p> 16.30 -18.00 </p>
+                <p> 18.30 -20.30 </p>
               </div>
               <div class="icon-box" data-aos="fade-up" data-aos-delay="200"> <i
                   class="bx bx-cube-alt"></i>
                 <h4>Venerdi`</h4>
-                <p>16.30 -18.00</p>
+                <p>18.30 -20.30</p>
               </div>
             </div>
-            <div class="col-xl-6 col-lg-7" data-aos="fade-right"> <img src="assets/img/squadre/rilanciata.jpg"
+            <div class="col-xl-6 col-lg-7" data-aos="fade-right"> <img src="assets/img/squadre/u14misto.jpg"
                 class="img-fluid" alt=""> </div>
           </div>
         </div>
@@ -158,12 +158,21 @@ edit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas
                   class="img-fluid" alt="">
                 <div class="member-info">
                   <div class="member-info-content">
-                    <h4>Gilberto Versari</h4>
+                    <h4>Mario Brini</h4>
                     <span>Allenatore</span> </div>
                 </div>
               </div>
             </div>
-           
+            <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="member"> <img src="assets/img/testimonials/img-4.jpg"
+                  class="img-fluid" alt="">
+                <div class="member-info">
+                  <div class="member-info-content">
+                    <h4>Matteo Ricci Picciloni</h4>
+                    <span>Preparatore Tecnico</span> </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

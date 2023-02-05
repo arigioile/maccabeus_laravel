@@ -36,13 +36,13 @@
         <nav id="navbar" class="navbar">
           <ul>
             <!-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li> -->
-            <li><a class="nav-link scrollto" href="#about">Chi siamo</a></li>
-            <!--  <li><a class="nav-link scrollto" href="#teams">Squadre</a></li> -->
-             <li class="dropdown"><a href="#news"><span>News</span> </a>
-            <li class="dropdown"><a href="#teams"><span>Squadre</span> <i class="bi bi-chevron-down"></i></a>
+            <li><a class="nav-link scrollto" href="index.html#about">Chi siamo</a></li>
+            <!--  <li><a class="nav-link scrollto" href="index.html#teams">Squadre</a></li> -->
+             <li class="dropdown"><a href="index.html#news"><span>News</span> </a>
+            <li class="dropdown"><a href="index.html#teams"><span>Squadre</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
                 <!-- <li><a href="inner-page.html">Palla Rilanciata Misto</a></li> -->
-                <li class="dropdown"><a href="inner-page.html"><span>Palla
+                <li class="dropdown"><a href="squadra_ril.html"><span>Palla
                       Rilanciata Misto</span> <i class="bi bi-chevron-right"></i></a>
                   <ul>
                     <li><a href="regolamento_rilanciata.html">Regolamento</a></li>
@@ -51,7 +51,7 @@
                     <!-- allenamenti, tecnici, atleti -->
                   </ul>
                 </li>
-                <li class="dropdown"><a href="inner-page.html"><span>Supervolley</span>
+                <li class="dropdown"><a href="squadra_super.html"><span>Supervolley</span>
                     <i class="bi bi-chevron-right"></i></a>
                   <ul>
                     <li><a href="regolamento_supervolley.html">Regolamento</a></li>
@@ -60,7 +60,7 @@
                     <!-- allenamenti, tecnici, atleti -->
                   </ul>
                 </li>
-                <li class="dropdown"><a href="inner-page.html"><span>U12</span>
+                <li class="dropdown"><a href="squadra_super.html"><span>U12</span>
                     <i class="bi bi-chevron-right"></i></a>
                   <ul>
                     <li><a href="#">Risultati &amp; classifiche</a></li>
@@ -68,7 +68,7 @@
                     <!-- allenamenti, tecnici, atleti -->
                   </ul>
                 </li>
-                <li class="dropdown"><a href="inner-page.html"><span>U13 F</span>
+                <li class="dropdown"><a href="squadra_u13f.html"><span>U13 F</span>
                     <i class="bi bi-chevron-right"></i></a>
                   <ul>
                     <li><a href="https://www.cpvolley.it/faenza-lugo-ravenna/campionato/2204/under-13-femminile">Risultati
@@ -77,7 +77,7 @@
                     <!-- allenamenti, tecnici, atleti -->
                   </ul>
                 </li>
-                <li class="dropdown"><a href="inner-page.html"><span>U14 Misto</span>
+                <li class="dropdown"><a href="squadra_u14misto.html"><span>U14 Misto</span>
                     <i class="bi bi-chevron-right"></i></a>
                   <ul>
                     <li><a href="https://www.cpvolley.it/faenza-lugo-ravenna/campionato/2201/under-14-misto">Risultati
@@ -86,7 +86,7 @@
                     <!-- allenamenti, tecnici, atleti -->
                   </ul>
                 </li>
-                <li class="dropdown"><a href="#"><span>Open Misto</span> <i class="bi bi-chevron-right"></i></a>
+                <li class="dropdown"><a href="squadra_misto.html"><span>Open Misto</span> <i class="bi bi-chevron-right"></i></a>
                   <ul>
                     <li><a href="https://www.cpvolley.it/faenza-lugo-ravenna/campionato/2186/open-misto-girone-a">Risultati
                         &amp; classifiche</a></li>
@@ -99,7 +99,7 @@
             </li>
            
               <!-- prossime gare, ultimi risultati, varie --> </li>
-            <li><a class="nav-link scrollto" href="#portfolio">Sponsor</a></li>
+            <li><a class="nav-link scrollto" href="index.html#sponsor">Sponsor</a></li>
             <!-- <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li> -->
             <!-- <li><a class="nav-link scrollto" href="#team">Team</a></li> -->
             <li class="dropdown"><a href="#"><span>PhotoGallery</span> <i class="bi bi-chevron-down"></i></a>
@@ -135,7 +135,7 @@
                 <li><a href="#">2022/2023</a></li>
               </ul>
             </li>
-            <li><a class="nav-link scrollto" href="#contact">Contatti</a></li>
+            <li><a class="nav-link scrollto" href="index.html#contact">Contatti</a></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i> </nav>
         <!-- .navbar --> </div>

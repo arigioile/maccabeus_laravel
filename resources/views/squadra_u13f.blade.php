@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.app')
 <main id="main">
       <!-- ======= Breadcrumbs Section ======= -->
       <section class="breadcrumbs">

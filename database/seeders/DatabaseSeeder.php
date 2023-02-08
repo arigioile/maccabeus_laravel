@@ -20,5 +20,34 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        // Credenziali Amministratore
+        \App\Models\User::factory()->create([
+            'name' => 'Administrator',
+            'email' => 'a@a.a',
+            'password' => Hash::make('12345678'),
+        ]);
+
+        // Creo un avviso vuoto
+        \App\Models\Notice::create(['title' => 'Primo avviso']);
+
+
+        // Creo un stagione
+        $season = \App\Models\Season::create(['name' => '2022/23']);
+
+        \App\Models\Team::factory()->count(14)
+            ->has(\App\Models\Player::factory()->count(10))
+            ->create();
+
+        $tournament = $season->tournaments()->create(['name' => 'Torneo Ufficiale']);
+        $tournament->teams()->sync([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+        $tournament = $season->tournaments()->create(['name' => 'Torneo Funi']);
+        $tournament->teams()->sync([1, 2, 3, 4, 11, 12]);
+
+        $tournament = $season->tournaments()->create([
+            'name' => 'Open Misto girone A',
+            'query' => 'https://www.cpvolley.it/faenza-lugo-ravenna/campionato/2186/{round}/open-misto-girone-a'
+        ]);
     }
 }

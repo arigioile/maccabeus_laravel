@@ -1,4 +1,4 @@
- @extends('layouts.main')
+ @extends('layouts.app')
  <body><!-- ======= Header ======= -->
     <header id="header" class="fixed-top d-flex align-items-center">
       <div class="container d-flex justify-content-between">
@@ -72,7 +72,7 @@
                 <!-- <li><a href="#"></a></li> -->
               </ul>
             </li>
-           
+
               <!-- prossime gare, ultimi risultati, varie --> </li>
             <li><a class="nav-link scrollto" href="#portfolio">Sponsor</a></li>
             <!-- <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li> -->

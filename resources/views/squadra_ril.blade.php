@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.app')
 <main id="main">
       <!-- ======= Breadcrumbs Section ======= -->
       <section class="breadcrumbs">
@@ -163,7 +163,7 @@ edit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas
                 </div>
               </div>
             </div>
-           
+
           </div>
         </div>
       </section>

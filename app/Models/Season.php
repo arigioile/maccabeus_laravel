@@ -85,12 +85,12 @@ class Season extends Model
         return null;
     }
 
-    public static function myActiveTeams()
+    public static function myActiveTournaments()
     {
         $season = Season::active();
 
         if ($season) {
-            return $season->myTeams();
+            return $season->myTournaments();
         }
 
         return null;

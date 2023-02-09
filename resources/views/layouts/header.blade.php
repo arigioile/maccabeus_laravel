@@ -20,17 +20,19 @@
                     </a>
 
                     <ul>
-                        @foreach (\App\Models\Season::myActiveTeams() as $team)
-                            <li class="dropdown">
-                                <a href="squadra_ril.html"> {{ $team->name }}
-                                    <i class="bi bi-chevron-right"></i>
-                                </a>
-                                <ul>
-                                    <li><a href="regolamento_rilanciata.html">La squadra</a></li>
-                                    <li><a href="#">Risultati &amp; classifiche</a></li>
-                                </ul>
-                            </li>
-                        @endforeach
+                        @if (\App\Models\Season::myActiveTournaments())
+                            @foreach (\App\Models\Season::myActiveTournaments()->get() as $tournament)
+                                <li class="dropdown">
+                                    <a href="squadra_ril.html"> {{ $tournament->name }}
+                                        <i class="bi bi-chevron-right"></i>
+                                    </a>
+                                    {{-- <ul>
+                                <li><a href="regolamento_rilanciata.html">La squadra</a></li>
+                                <li><a href="#">Risultati &amp; classifiche</a></li>
+                            </ul> --}}
+                                </li>
+                            @endforeach
+                        @endif
                     </ul>
                 </li>
 

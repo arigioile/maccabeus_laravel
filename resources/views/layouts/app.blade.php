@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     {{-- DISAGIO - togliere l'inutile --}}
     <meta http-equiv="content-type" content="text/html; charset=utf-8">

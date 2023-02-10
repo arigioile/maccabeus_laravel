@@ -60,6 +60,8 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/tournament/{tournament}', [App\Http\Controllers\TournamentController::class, 'showGuests'])->name('tournament.show');
+
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [App\Http\Controllers\AdminController::class, 'index'])->name('home');
 

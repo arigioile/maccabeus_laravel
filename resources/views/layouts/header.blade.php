@@ -23,13 +23,9 @@
                         @if (\App\Models\Season::myActiveTournaments())
                             @foreach (\App\Models\Season::myActiveTournaments()->get() as $tournament)
                                 <li class="dropdown">
-                                    <a href="squadra_ril.html"> {{ $tournament->name }}
-                                        <i class="bi bi-chevron-right"></i>
+                                    <a href="{{ route('tournament.show', $tournament->id) }}">
+                                        {{ $tournament->name }}
                                     </a>
-                                    {{-- <ul>
-                                <li><a href="regolamento_rilanciata.html">La squadra</a></li>
-                                <li><a href="#">Risultati &amp; classifiche</a></li>
-                            </ul> --}}
                                 </li>
                             @endforeach
                         @endif

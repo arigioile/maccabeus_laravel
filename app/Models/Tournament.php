@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Log;
 
 class Tournament extends Model
 {
@@ -88,5 +89,69 @@ class Tournament extends Model
             $max = max($max, $team->pivot->match_won + $team->pivot->match_lost);
         }
         return $max;
+    }
+
+    public function downloadResults()
+    {
+        $parser = new CPVolleyParser();
+
+        // Loop tutti gli incontri del campionato
+        $totRounds = $this->results->max('round');
+        if (!$totRounds) return;
+
+        $url = $this->query;
+        for ($round = 1; $round <= $totRounds; $round++) {
+            Log::info('Parser: Download risultati giornata ' . $round);
+            // $url = 'https://www.cpvolley.it/faenza-lugo-ravenna/campionato/2186/{round}/open-misto-girone-a';
+            $filled_url = str_replace("{round}", $round, $url);
+
+            // Lista degli incontri di una giornata
+            $htmlText = file_get_contents($filled_url);
+            $list = $parser->parseResultMatches($htmlText);
+            if ($list) {
+                foreach ($list as $item) {
+                    $homeTeam = $this->teams()->firstOrCreate([
+                        'name' =>  $item['team'][0],
+                    ]);
+                    $visitorTeam = $this->teams()->firstOrCreate([
+                        'name' =>  $item['team'][1],
+                    ]);
+
+                    $result = Result::firstOrCreate([
+                        'tournament_id' => $this->id,
+                        'home_team_id' => $homeTeam->id,
+                        'visitor_team_id' => $visitorTeam->id,
+                        'round' => $round,
+                    ]);
+
+                    $result->teams()->sync([
+                        $homeTeam->id => [
+                            'set_won' => $item['set_won'][0],
+                            'set_lost' => $item['set_lost'][0],
+                            'score' => $item['score'][0],
+                            'set_1' => $item['set_1'][0],
+                            'set_2' => $item['set_2'][0],
+                            'set_3' => $item['set_3'][0],
+                            'set_4' => $item['set_4'][0],
+                            'set_5' => $item['set_5'][0],
+                            'winner' => $item['winner'][0],
+                            'loser' => $item['winner'][1],
+                        ],
+                        $visitorTeam->id => [
+                            'set_won' => $item['set_won'][1],
+                            'set_lost' => $item['set_lost'][1],
+                            'score' => $item['score'][1],
+                            'set_1' => $item['set_1'][1],
+                            'set_2' => $item['set_2'][1],
+                            'set_3' => $item['set_3'][1],
+                            'set_4' => $item['set_4'][1],
+                            'set_5' => $item['set_5'][1],
+                            'winner' => $item['winner'][1],
+                            'loser' => $item['winner'][0],
+                        ],
+                    ]);
+                }
+            }
+        }
     }
 }

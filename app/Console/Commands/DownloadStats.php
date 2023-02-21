@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Models\Season;
 use Illuminate\Console\Command;
 use Carbon\Carbon;
 
@@ -31,7 +32,16 @@ class DownloadStats extends Command
         $now = Carbon::now();
         $this->info('- Start job (' . $this->signature . '): ' . $now);
 
-        // TODO: Eseguire operazioni per scaricate le statistiche
+        // Scarico i risultati dei tornei appartenenti alla stagione in corso
+        $tournaments = Season::myActiveTournaments();
+        $this->info('found ' . $tournaments->count());
+        foreach ($tournaments->get() as $tournament ) {
+            $this->info(' Download results for tournament ' . $tournament->name );
+
+            // Scarico i risultati e aggiorno le classifiche
+            $tournament->downloadResults();
+            $tournament->updateRanking();
+        }
 
         return Command::SUCCESS;
     }

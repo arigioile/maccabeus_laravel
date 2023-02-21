@@ -34,7 +34,6 @@ class DownloadStats extends Command
 
         // Scarico i risultati dei tornei appartenenti alla stagione in corso
         $tournaments = Season::myActiveTournaments();
-        $this->info('found ' . $tournaments->count());
         foreach ($tournaments->get() as $tournament ) {
             $this->info(' Download results for tournament ' . $tournament->name );
 
